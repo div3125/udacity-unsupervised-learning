@@ -11809,7 +11809,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11866,7 +11866,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display a description of the dataset</span>
@@ -12018,6 +12018,10 @@ div#notebook {
 <span class="n">samples</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">indices</span><span class="p">],</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
 <span class="k">print</span> <span class="s2">&quot;Chosen samples of wholesale customers dataset:&quot;</span>
 <span class="n">display</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span>
+
+<span class="c1"># Sample distances from mean and median of the dataset</span>
+<span class="n">display</span><span class="p">(</span><span class="n">samples</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">samples</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">median</span><span class="p">()))</span>
 </pre></div>
 
 </div>
@@ -12103,6 +12107,138 @@ div#notebook {
 
 </div>
 
+<div class="output_area">
+<div class="prompt"></div>
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fresh</th>
+      <th>Milk</th>
+      <th>Grocery</th>
+      <th>Frozen</th>
+      <th>Detergents_Paper</th>
+      <th>Delicatessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-11370.0</td>
+      <td>5299.0</td>
+      <td>16047.0</td>
+      <td>-2285.0</td>
+      <td>6648.0</td>
+      <td>-1453.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-8913.0</td>
+      <td>2284.0</td>
+      <td>331.0</td>
+      <td>-2411.0</td>
+      <td>-2160.0</td>
+      <td>-1489.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>28254.0</td>
+      <td>-5156.0</td>
+      <td>-4351.0</td>
+      <td>-2030.0</td>
+      <td>-2445.0</td>
+      <td>-1507.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+<div class="output_area">
+<div class="prompt"></div>
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fresh</th>
+      <th>Milk</th>
+      <th>Grocery</th>
+      <th>Frozen</th>
+      <th>Detergents_Paper</th>
+      <th>Delicatessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-7874.0</td>
+      <td>7468.0</td>
+      <td>19242.0</td>
+      <td>-739.0</td>
+      <td>8713.0</td>
+      <td>-894.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-5417.0</td>
+      <td>4453.0</td>
+      <td>3526.0</td>
+      <td>-865.0</td>
+      <td>-95.0</td>
+      <td>-930.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>31750.0</td>
+      <td>-2987.0</td>
+      <td>-1156.0</td>
+      <td>-484.0</td>
+      <td>-380.0</td>
+      <td>-948.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12126,9 +12262,9 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ol>
-<li>Considering that a larger amount is spent on <code>Milk</code>, <code>Grocery</code> and <code>Detergents_Paper</code>, I would say that sample 1 represents a cafe.</li>
+<li>A higher than average amount is spent on <code>Milk</code>, <code>Detergents_Paper</code> and especially <code>Grocery</code>. While, the spending on <code>Frozen</code> and <code>Delicatessen</code> are much lesser than average spending and even less for <code>Fresh</code>. This pattern can represent a cafe. </li>
 <li>This sample has a higher than average (mean) spending on <code>Milk</code> and <code>Grocery</code>. Also, the spending on category <code>Fresh</code> is considerably higher as compared to remaining 3 categories. Also, spending on <code>Detergents_Paper</code> is much less compared to sample 1, meaning that this sample may represent a retailer.</li>
-<li>The highest spending is on <code>Fresh</code> products followed by <code>Grocery</code> and <code>Frozen</code>, although the latter 2 features are a lot less than the former in magnitude. Overall, the pattern represents a market's annual spending according to me.</li>
+<li>The spending on <code>Fresh</code> is considerably higher than mean and median values while being less than average for other 5 categories. This establishment may represent a market.</li>
 </ol>
 
 </div>
@@ -19770,7 +19906,7 @@ AAAAAElFTkSuQmCC
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xe26fc50&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xd747748&gt;</pre>
 </div>
 
 </div>
@@ -22003,6 +22139,8 @@ PwsASCfKZwMAAADIHTJCAAAAAHKHQAgAAABA7hAIAQAAAMgdAiEAAAAAuUMgBAAAACB3CIQAAAAA
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the predictions</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">pred</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sample_preds</span><span class="p">):</span>
     <span class="k">print</span> <span class="s2">&quot;Sample point&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;predicted to be in Cluster&quot;</span><span class="p">,</span> <span class="n">pred</span>
+    <span class="k">print</span> <span class="s1">&#39;The distance between sample point {} and center of cluster {}:&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">pred</span><span class="p">)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="n">samples</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">true_centers</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">pred</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -22018,8 +22156,32 @@ PwsASCfKZwMAAADIHTJCAAAAAHKHQAgAAABA7hAIAQAAAMgdAiEAAAAAuUMgBAAAACB3CIQAAAAA
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Sample point 0 predicted to be in Cluster 0
+The distance between sample point 0 and center of cluster 0:
+Fresh               -3369.0
+Milk                 4873.0
+Grocery             14586.0
+Frozen               -214.0
+Detergents_Paper     6535.0
+Delicatessen         -810.0
+dtype: float64
 Sample point 1 predicted to be in Cluster 0
+The distance between sample point 1 and center of cluster 0:
+Fresh               -912.0
+Milk                1858.0
+Grocery            -1130.0
+Frozen              -340.0
+Detergents_Paper   -2273.0
+Delicatessen        -846.0
+dtype: float64
 Sample point 2 predicted to be in Cluster 1
+The distance between sample point 2 and center of cluster 1:
+Fresh               31373.0
+Milk                -1476.0
+Grocery               832.0
+Frozen              -1015.0
+Detergents_Paper       82.0
+Delicatessen         -709.0
+dtype: float64
 </pre>
 </div>
 </div>
@@ -22035,9 +22197,32 @@ Sample point 2 predicted to be in Cluster 1
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li>Sample point 0 represents a cafe or similar establishments, consistent with the prediction.</li>
-<li>Sample point 1 too represents the same,  which is not consistent with the original  prediction of a retailer.</li>
-<li>Sample point 2 represents a market, consistent with the prediction.</li>
+<li>Sample point 0:-<ul>
+<li>This has higher spending on <code>Milk</code>, <code>Grocery</code> and <code>Detergents_Paper</code> than the cluster center point.</li>
+<li>Similarly it has lesser amount spent on other 3 categories.</li>
+<li>Prediction according to table in <strong>Question 8</strong> :- Segment 0.</li>
+<li>Prediction according to clustering algorithm :- Segment 0.</li>
+<li>Hence both predictions are consistent with each other.</li>
+</ul>
+</li>
+<li>Sample point 1:-<ul>
+<li>Higher than average spending on <code>Milk</code>.</li>
+<li>Near average (but somewhat lower) spending on <code>Fresh</code>, <code>Frozen</code> and <code>Delicatessen</code>.</li>
+<li>Lower than average spending on <code>Groccery</code> and <code>Detergents_Paper</code>.</li>
+<li>Prediction according to table in <strong>Question 8</strong> :- It is hard to determine exactly but a rough guess would be <strong>Segment 1</strong> since most categories have lower than average spending.</li>
+<li>Prediction according to clustering algorithm :- Segment 0.</li>
+<li>Therefore, both predictions differ and hence they are inconsistent with each other.</li>
+</ul>
+</li>
+<li>Sample point 2:-<ul>
+<li>Very high difference between average and actual spending on <code>Fresh</code>.</li>
+<li>Near average (but somewhat higher) spending on <code>Grocery</code> and <code>Detergents_Paper</code>.</li>
+<li>Lower than average spending on <code>Milk</code>, <code>Frozen</code> and <code>Delicatessen</code>.</li>
+<li>Prediction according to table in <strong>Question 8</strong> :- Even though the spending on <code>Grocery</code> and <code>Detergents_Paper</code> close to average, the spending on <code>Milk</code> is much lesser than average and hence this point cannot be assigned to Segment 0. This point should be in Segment 1 considering near average spending on two categories and less than average spending on 3 categories. Since, spending on <code>Fresh</code> is much higher than average, this data point will be far from the center on but still it will belong to <strong>Segment 1</strong>.</li>
+<li>Prediction according to clustering algorithm :- Segment 1.</li>
+<li>Hence both predictions are consistent with each other.</li>
+</ul>
+</li>
 </ul>
 
 </div>
